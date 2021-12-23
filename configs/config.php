@@ -21,7 +21,7 @@ define('USER_AGENT', 'Tripwire Server - adminEmail@example.com');
 // EVE SSO info
 define('EVE_SSO_CLIENT', getenv('EVE_SSO_CLIENT'));
 define('EVE_SSO_SECRET', getenv('EVE_SSO_SECRET'));
-define('EVE_SSO_REDIRECT', getenv('APP_DOMAIN').'/index.php?mode=sso');
+define('EVE_SSO_REDIRECT', getenv('EVE_SSO_CALLBACK'));
 
 // Discord integration
 /*define('DISCORD_WEB_HOOK', array(
