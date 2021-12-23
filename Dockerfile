@@ -12,7 +12,7 @@ RUN apk update \
 RUN mkdir /app
 
 # Pull in tripwire files
-RUN git clone --branch 1.17 https://bitbucket.org/daimian/tripwire.git /app
+RUN git clone --branch 1.18 https://bitbucket.org/daimian/tripwire.git /app
 
 # Copy Tripwire Config files
 COPY configs/config.php /app/config.php
