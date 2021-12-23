@@ -7,7 +7,7 @@ date_default_timezone_set('UTC');
 define('APP_NAME', getenv('APP_NAME'));
 
 // Content file server (Use CDN here if you have one) - used for serving images, css, js files
-define('CDN_DOMAIN', 'localhost');
+define('CDN_DOMAIN', getenv('APP_DOMAIN'));
 
 // EVE SDE table name
 define('EVE_DUMP', 'eve_carnyx');
