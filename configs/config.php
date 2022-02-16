@@ -24,8 +24,16 @@ define('EVE_SSO_SECRET', getenv('EVE_SSO_SECRET'));
 define('EVE_SSO_REDIRECT', getenv('EVE_SSO_CALLBACK'));
 
 // Discord integration
-if(!is_null('DISCORD_WEB_HOOK', null)){
-    define('DISCORD_WEB_HOOK', array(
+$discord_webhooks = getenv('DISCORD_WEB_HOOK') ?? null;
+if(!is_null($discord_webhooks)){
+    $webhooks = [];
+    $hooks = explode(',',$discord_webhooks);
+    foreach($hooks as $hook_string){
+        $hook = explode('::', $hook_string);
+        $webhook[$hook[0]] = $hook[1];
+    }
+    define('DISCORD_WEB_HOOK', $webhook);
+    /*define('DISCORD_WEB_HOOK', array(
 	'maskID' => getenv('DISCORD_WEB_HOOK')
-    )); 
+    ));*/ 
 }
