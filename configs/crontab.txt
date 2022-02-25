@@ -1,2 +1,2 @@
-0 * * * * php /var/www/tripwire/system_activity.cron.php
-0 * * * * php /var/www/tripwire/account_update.cron.php
+0 * * * * php /var/www/html/tripwire/system_activity.cron.php
+0 * * * * php /var/www/html/tripwire/account_update.cron.php
